@@ -10,18 +10,4 @@ class Solution(object):
         :type list2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        dummy = ListNode()
-        node = dummy
-        while list1 and list2:
-            if list1.val > list2.val:
-                node.next = ListNode(list2.val)
-                list2 = list2.next
-            else:
-                node.next = ListNode(list1.val)
-                list1 = list1.next
-            node = node.next
-        if list1:
-            node.next = list1
-        else:
-            node.next = list2
-        return dummy.next   
+        
